@@ -12,8 +12,9 @@ const Header = () => {
             width={200}
             height={100}
             layout="fixed"
+            style={{ color: "white" }}
           />
-          <figcaption>
+          <figcaption style={{ color: "white" }}>
             nasa space apps challenge logo - team challenjour
           </figcaption>
         </figure>
