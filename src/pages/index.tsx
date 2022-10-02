@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             <Header />
             <section className="flex justify-center">
               <Globe wind={size} />
-              <Aside />
+              {/* <Aside /> */}
               <Footer />
             </section>
           </main>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -15,11 +14,10 @@ const Header = () => {
           className="bg-white h-10 my-16"
         >
           {isOpen ? <ChevronRight /> : <ChevronLeft />}
-
         </button>
       </div>
       <nav className="container flex justify-between flex-column items-center py-5">
-        {isOpen &&
+        {isOpen && (
           <>
             <figure>
               <Image
@@ -42,12 +40,12 @@ const Header = () => {
                 className="text-2xl font-bold"
               >
                 <a className="bg-blue-500 text-xl font-bold p-4 rounded-2xl">
-                  your mother.
+                  About Me
                 </a>
               </Link>
             </div>
           </>
-        }
+        )}
       </nav>
     </header>
   );

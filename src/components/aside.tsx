@@ -1,9 +1,5 @@
 const Aside = () => {
-  return (
-    <aside>
-      <h1>Aside</h1>
-    </aside>
-  );
+  return <aside></aside>;
 };
 
 export default Aside;
