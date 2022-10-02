@@ -29,15 +29,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {!completed ?
-        <Loader2
-          completed={completed}
-          setCompleted={setCompleted}
-        />
-        :
+      {!completed ? (
+        <Loader2 completed={completed} setCompleted={setCompleted} />
+      ) : (
         <>
           <Head>
-            <title>le globe | uwu</title>
+            <title> | uwu</title>
             <meta name="description" content="le gwobe rawr" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
@@ -45,13 +42,13 @@ const Home: NextPage = () => {
             <Header />
             <section className="flex justify-center">
               <Globe wind={size} />
-              {/* <Aside /> */}
+              <Aside />
               <Footer />
               <ISSTimelineSlider />
             </section>
           </main>
         </>
-      }
+      )}
     </>
   );
 };

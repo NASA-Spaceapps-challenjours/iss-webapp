@@ -39,7 +39,7 @@ const ISSTimelineSlider = () => {
       <Slider
         defaultValue={50}
         step={10}
-        max={100}
+        // max={100}
         marks={marks}
         valueLabelDisplay="on"
         value={time}
