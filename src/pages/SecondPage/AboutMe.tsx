@@ -182,7 +182,7 @@ function ISS() {
                 <a href="https://github.com/gin-gonic/contrib"> Gin Gonic Contrib </a>
               </div>
             </ParallaxLayer >
-          </div >
+          </div>
 
           <ParallaxLayer
             offset={1.0}
