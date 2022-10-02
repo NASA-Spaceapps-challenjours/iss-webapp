@@ -129,7 +129,6 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
     colladaModel.scale = 500000;
     modelLayer.addRenderable(colladaModel);
     window.setInterval(function () {
-<<<<<<< HEAD
 
         var coords = fetch("http://127.0.0.1:8080/updateIssLocation")
             .then(res => res.json())
@@ -144,18 +143,6 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
             .catch(err => console.log("ewwow"));
 
         console.log(lat, lon, alt);
-=======
-        if (lat < 360) {
-            lat += 0.1;
-            if (oneCycle == true) {
-                positionArray.push(position);
-            }
-        } else {
-            lat = 0.0;
-            oneCycle = false;
-        }
-
->>>>>>> 52059cfecf901e77bb26c30f1f45631cb2ac5278
         position = new WorldWind.Position(lat, lon, alt);
 
         // Placemark label recording

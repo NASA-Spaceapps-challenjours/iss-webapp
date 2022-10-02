@@ -7,6 +7,7 @@ import Header from "../components/header";
 import Loader2 from "../components/Loader2";
 
 import { useState, useEffect } from "react";
+import ISSTimelineSlider from "../components/ISSTimelineSlider";
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -48,6 +49,7 @@ const Home: NextPage = () => {
               <Globe wind={size} />
               <Aside />
               <Footer />
+              <ISSTimelineSlider />
             </section>
           </main>
         </>
