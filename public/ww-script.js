@@ -1,6 +1,6 @@
 
 function addPlaceMarker() {
-    var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+    let placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
     placemarkAttributes.imageOffset = new WorldWind.Offset(
         WorldWind.OFFSET_FRACTION, 0.3,
         WorldWind.OFFSET_FRACTION, 0.0);
@@ -10,8 +10,9 @@ function addPlaceMarker() {
         WorldWind.OFFSET_FRACTION, 0.5,
         WorldWind.OFFSET_FRACTION, 1.0);
 
-    var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+    let placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
     placemark.alwaysOnTop = true;
+    placemark.attributes = placemarkAttributes;
     placemarkLayer.addRenderable(placemark);
     return placemark;
 }
@@ -44,6 +45,49 @@ wwd.addLayer(issLayer);
 var placemarkLayer = new WorldWind.RenderableLayer("Placemark");
 wwd.addLayer(placemarkLayer);
 
+var pinLibrary = WorldWind.configuration.baseUrl + "images/pushpins/plain-black.png" // location of the image files
+placemark,
+    placemarkAttributes = new WorldWind.PlacemarkAttributes(null),
+    latitude = 37.6872,
+    longitude = -97.3301;
+
+// Set up the common placemark attributes.
+placemarkAttributes.imageScale = 1;
+placemarkAttributes.imageOffset = new WorldWind.Offset(
+    WorldWind.OFFSET_FRACTION, 0.3,
+    WorldWind.OFFSET_FRACTION, 0.0);
+placemarkAttributes.imageColor = WorldWind.Color.WHITE;
+placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+    WorldWind.OFFSET_FRACTION, 0.5,
+    WorldWind.OFFSET_FRACTION, 1.0);
+placemarkAttributes.labelAttributes.color = WorldWind.Color.YELLOW;
+placemarkAttributes.drawLeaderLine = true;
+placemarkAttributes.leaderLineAttributes.outlineColor = WorldWind.Color.RED;
+
+// For each placemark image, create a placemark with a label.
+// Create the placemark and its label.
+placemark = new WorldWind.Placemark(new WorldWind.Position(latitude, longitude, 1e2), true, null);
+placemark.label = "Placemark for Wichita"
+    + "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n"
+    + "Lon " + placemark.position.longitude.toPrecision(5).toString();
+placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
+
+// Create the placemark attributes for this placemark. Note that the attributes differ only by their
+// image URL.
+placemarkAttributes = new WorldWind.PlacemarkAttributes(placemarkAttributes);
+placemarkAttributes.imageSource = pinLibrary;
+placemark.attributes = placemarkAttributes;
+
+// Create the highlight attributes for this placemark. Note that the normal attributes are specified as
+// the default highlight attributes so that all properties are identical except the image scale. You could
+// instead vary the color, image, or other property to control the highlight representation.
+highlightAttributes = new WorldWind.PlacemarkAttributes(placemarkAttributes);
+highlightAttributes.imageScale = 1.2;
+placemark.highlightAttributes = highlightAttributes;
+
+// Add the placemark to the layer.
+placemarkLayer.addRenderable(placemark);
+
 // ISS Position values
 var lat = 10.0;
 var lon = -125.0;
@@ -51,6 +95,7 @@ var alt = 800000.0;
 
 var position = new WorldWind.Position(lat, lon, alt);
 var config = { dirPath: "/models/" };
+
 var placemark = addPlaceMarker();
 
 var pathAttributes = new WorldWind.ShapeAttributes(null);
@@ -93,6 +138,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
             lat = 0.0;
             oneCycle = false;
         }
+
         position = new WorldWind.Position(lat, lon, alt);
 
         // Placemark label recording
