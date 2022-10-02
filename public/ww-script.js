@@ -114,6 +114,15 @@ var lat = 10.0;
 var lon = -125.0;
 var alt = 800000.0;
 
+fetch("https://iss-go-backend-z6hx3vadea-uc.a.run.app/getIssLocation")
+  .then((res) => res.json())
+  .then((data) => {
+    const { latitude, longitude, altitude } = data;
+    wwd.navigator.lookAtLocation.latitude = latitude;
+    wwd.navigator.lookAtLocation.longitude = longitude;
+  })
+  .catch((err) => console.log("ewwow"));
+
 var position = new WorldWind.Position(lat, lon, alt);
 var config = { dirPath: "/models/" };
 
