@@ -16,7 +16,7 @@ function Loader2(props) {
   useEffect(() => {
     setTimeout(() => {
       props.setCompleted(true);
-    }, 5000);
+    }, 1000);
   }, []);
 
   return (

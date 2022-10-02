@@ -10,7 +10,7 @@ function addPlaceMarker() {
         WorldWind.OFFSET_FRACTION, 0.5,
         WorldWind.OFFSET_FRACTION, 1.0);
 
-    let placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+    let placemark = new WorldWind.Placemark(new WorldWind.Position(0, 0, 0), false, placemarkAttributes);
     placemark.alwaysOnTop = true;
     placemark.attributes = placemarkAttributes;
     placemarkLayer.addRenderable(placemark);
@@ -88,19 +88,10 @@ placemark.highlightAttributes = highlightAttributes;
 // Add the placemark to the layer.
 placemarkLayer.addRenderable(placemark);
 
-// ISS Position values
-var lat = 10.0;
-var lon = -125.0;
-var alt = 800000.0;
-
-var position = new WorldWind.Position(lat, lon, alt);
 var config = { dirPath: "/models/" };
 
 var placemark = addPlaceMarker();
-
-var pathAttributes = new WorldWind.ShapeAttributes(null);
 var positionArray = [];
-positionArray.push(position);
 
 // Create the path.
 var path = new WorldWind.Path(positionArray, null);
@@ -122,35 +113,35 @@ pathsLayer.displayName = "Paths";
 pathsLayer.addRenderable(path);
 wwd.addLayer(pathsLayer);
 
-var colladaLoader = new WorldWind.ColladaLoader(position, config);
+var colladaLoader = new WorldWind.ColladaLoader(new WorldWind.Position(0, 0, 0), config);
 var oneCycle = true;
 
 colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
     colladaModel.scale = 500000;
     modelLayer.addRenderable(colladaModel);
-    window.setInterval(function () {
-
-        var coords = fetch("http://127.0.0.1:8080/updateIssLocation")
+    modelLayer.addRenderable(path);
+    window.setInterval(async () => {
+        const coords = fetch("http://127.0.0.1:8080/updateIssLocation")
             .then(res => res.json())
             .then(data => {
                 const { latitude, longitude, altitude } = data;
-                lat = latitude;
-                lon = longitude;
-                alt = altitude;
-
-
+                return new WorldWind.Position(latitude, longitude, altitude);
             })
             .catch(err => console.log("ewwow"));
 
-        console.log(lat, lon, alt);
-        position = new WorldWind.Position(lat, lon, alt);
+        const getPosition = async () => {
+            const pos = await coords;
+            return pos;
+        };
 
-        // Placemark label recording
+        let position = await getPosition();
+        positionArray.push(position)
         placemark.label = "Placemark\n" +
             "Lat " + modelLayer.renderables[0].position.latitude.toPrecision(4).toString() + "\n" +
             "Lon " + modelLayer.renderables[0].position.longitude.toPrecision(5).toString();
         // ISS Model position updating
         modelLayer.renderables[0].position = position;
+        // console.log(position)
         wwd.redraw();
     }, 1000);
 });

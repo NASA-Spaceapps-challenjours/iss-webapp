@@ -22,20 +22,18 @@ const useWindowSize = () => {
   return size;
 };
 
-// const bingMapOn = () => {
-//   const wwd = document.getElementById("canvasOne");
-//   wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
-// }
-
 const Home: NextPage = () => {
   const size = useWindowSize();
   const [completed, setCompleted] = useState(undefined);
 
   return (
     <>
-      {!completed ? (
-        <Loader2 completed={completed} setCompleted={setCompleted} />
-      ) : (
+      {!completed ?
+        <Loader2
+          completed={completed}
+          setCompleted={setCompleted}
+        />
+        :
         <>
           <Head>
             <title>le globe | uwu</title>
@@ -51,7 +49,7 @@ const Home: NextPage = () => {
             </section>
           </main>
         </>
-      )}
+      }
     </>
   );
 };
