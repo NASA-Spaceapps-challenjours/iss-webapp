@@ -1,12 +1,14 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import AboutMeInfo from "./AboutMeInfo";
+import ScrollDown from "./ScrollDown";
 
 function ISS() {
   return (
     <div className="bg-black">
       <header className="App-header">
         <Parallax
-          pages={3}
+          pages={4}
           style={{ top: "0", left: "0", background: "black" }}
         >
           <ParallaxLayer
@@ -18,6 +20,7 @@ function ISS() {
               alignItems: "center",
             }}
           >
+            <ScrollDown />
             <img src="/images/stars.png" alt="stars" />
           </ParallaxLayer>
 
@@ -29,7 +32,18 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
+          <ParallaxLayer
+            offset={1}
+            speed={2}
+            factor={4}
+            style={{
+              display: "cover",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src="/images/stars.png" alt="stars" />
+          </ParallaxLayer>
           <ParallaxLayer
             offset={0.25}
             speed={5}
@@ -68,7 +82,7 @@ function ISS() {
           <ParallaxLayer
             offset={0.85}
             speed={5}
-            factor={3}
+            factor={50}
             style={{ width: "60%", marginRight: "70%" }}
           >
             <img src="/images/star.png" alt="star" />
@@ -76,130 +90,23 @@ function ISS() {
           <ParallaxLayer
             offset={0.55}
             speed={4}
+            factor={5}
             style={{ width: "80%", marginLeft: "40%" }}
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={1.25}
-            speed={0.5}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              fontStyle: "italic",
-            }}
-          ></ParallaxLayer>
-          <div className="flex justify-center">
-            <ParallaxLayer
-              offset={1.0}
-              speed={0.5}
-              style={{
-                display: "flex-column",
-                justifyContent: "",
-                alignItems: "center",
-                color: "white",
-                fontStyle: "italic",
-                height: 800,
-                width: 350,
-                marginLeft: 850,
-                marginTop: 100
-              }}
-            >
-              <div className='space-y-1'>
-                <h1 className='text-7xl'>About Us</h1>
-                <h2 className='px-14 text-2xl'>-----track the iss-----</h2>
-                <p>What's even better than tracking the Internation Space Station?</p>
-                <br />
-                <h2 className='px-12 text-2xl'>-----Challenjours-----</h2>
-
-                <div className="justify-content">
-                  <div className="column px-12">
-                    <img src="" alt="Rebecca Soza"></img>
-                  </div>
-                  <div className="column px-12">
-                    <img src="" alt="Bao-Van Nguyen"></img>
-                  </div>
-                  <div className="column px-12">
-                    <img src="" alt="Jacob Singers"></img>
-                  </div>
-                  <div className="column px-12">
-                    <img src="" alt="Adrian Yip"></img>
-                  </div>
-                  <div className="column px-12">
-                    <img src="" alt="Benjamin Serrano"></img>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="column px-12">
-                    <p>Rebecca Soza</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>Bao-Van Nguyen</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>Jacob Singers</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>Adrian Yip</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>Benjamin Serrano</p>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="column px-12">
-                    <p>About Rebecca</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>About Bao-Van</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>About Jacob</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>About Adrian</p>
-                  </div>
-                  <div className="column px-12">
-                    <p>About Benjamin</p>
-                  </div>
-                </div>
-                <h2 className='px-14 text-2xl'>-----Attributions-----</h2>
-                <a href="https://www.npmjs.com/package/react-lottie">React Lottie</a>
-                <br />
-                <a href="https://react-spring.dev/components/parallax">React Spring Paralax</a>
-                <br />
-                <a href="https://worldwind.arc.nasa.gov/autodocs/WebWorldWind/"> WorldWind </a>
-                <br />
-                <a href="https://spotthestation.nasa.gov/"> Spot the Station </a>
-                <br />
-                <a href="https://github.com/joshuaferrara/go-satellite"> Go Satellite </a>
-                <br />
-                <a href="https://github.com/gin-gonic/gin"> Gin Gonic</a>
-                <br />
-                <a href="https://github.com/gin-gonic/contrib"> Gin Gonic Contrib </a>
-              </div>
-            </ParallaxLayer >
-          </div >
-
-          <ParallaxLayer
-            offset={1.0}
-            speed={3.5}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              fontStyle: "italic",
-            }}
+            offset={1}
+            speed={2}
+            style={{ width: "70%", marginBottom: "40%" }}
           >
+            <img src="/images/earth.png" alt="earth" />
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={2.0}
-            speed={0.5}
+            offset={1.0}
+            speed={3}
             style={{
               display: "flex-column",
               justifyContent: "",
@@ -209,16 +116,90 @@ function ISS() {
               height: 800,
               width: 350,
               marginLeft: 850,
-              marginTop: 100
+              marginTop: 100,
             }}
           >
-            <div className='space-y-1'>
-              <h2 className='px-14 text-2xl'>-----User Guide-----</h2>
+            <AboutMeInfo />
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={2}
+            speed={1}
+            style={{
+              display: "flex-col",
+              justifyContent: "",
+              alignItems: "center",
+              color: "white",
+              fontStyle: "italic",
+            }}
+          >
+            <img src="/images/group.png" alt="group-picture" />
+            <div className="justify-content flex-col font-mono">
+              <div className="flex flex-row font bold place-content-center">
+                <h1>About Us</h1>
+              </div>
+              <h2>track the iss</h2>
+              <p>
+                What's even better than tracking the Internation Space Station?
+                It's tracking it in 3D. The purpose of iss.ict-challenjours is
+                to track the ISS's past, current, and future location while
+                providing a fun, interactive, user-friendly interface.
+              </p>
+
+              <h2>User Guide</h2>
+              <div>
+                <h3>Earth 3D Rotation</h3>
+                <p>
+                  Users can rotate the Earth 360 degrees, to observe the Earth
+                  while watching the International Space Station rotates around
+                  the Earth.
+                </p>
+              </div>
+              <div>
+                <h3>Track ISS Path</h3>
+                <p>
+                  The tracker of the International Space Station displays where
+                  the ISS is currently and its path 90 minutes ago and where it
+                  will be 90 minutes later. Users can interact with the slider
+                  to see where the ISS was or will be at a specific time within
+                  the 90 minutes time frame.
+                </p>
+              </div>
+              <div>
+                <h3>Debris Tracker Toggler</h3>
+                <p>
+                  Users can interact with the "Debris" button to see space
+                  debris alerts within the orbital of the ISS.
+                </p>
+              </div>
+              <div>
+                <h3>Sighting Opportunities</h3>
+                <p>
+                  Users can enter the chosen location to see the prediction of
+                  time and date the International Space Station Location will
+                  pass
+                </p>
+              </div>
+              <h2>The Challenjours</h2>
+
+              <p>
+                We are a team of 5 members, Rebecca Soza, Bao-Van Nguyen, Jacob
+                Bradley Singer, Adrian Yip, and Benjamin Serrano. We are
+                Computer Science students at Wichita State University.
+                Initially, we chose Track the ISS because the idea seems
+                interesting to us and it fits our capability the most. As we
+                progress, we realized the importance of the ISS, as well as the
+                lacking of open-source code, as well as educative aspect of all
+                the web applications and applications available out there. Our
+                goal is to create a web-applications that is interactive,
+                friendly-user, where everyone can learn and use, as well as be
+                educative towards users who are interested in the ISS.
+              </p>
             </div>
           </ParallaxLayer>
-        </Parallax >
-      </header >
-    </div >
+        </Parallax>
+      </header>
+    </div>
   );
 }
 
