@@ -34,7 +34,7 @@ const Home: NextPage = () => {
       ) : (
         <>
           <Head>
-            <title> | uwu</title>
+            <title>ISS Tracker | Home</title>
             <meta name="description" content="le gwobe rawr" />
             <link rel="icon" href="/favicon.ico" />
           </Head>

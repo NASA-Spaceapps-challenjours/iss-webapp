@@ -32,7 +32,7 @@ var highlightController = new WorldWind.HighlightController(wwd);
 // Add some image layers to the WorldWindow's globe.
 wwd.addLayer(new WorldWind.BMNGOneImageLayer());
 wwd.addLayer(new WorldWind.BMNGLandsatLayer());
-// wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
+wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
 
 // Add a COLLADA model of the ISS that orbits the Earth
 var modelLayer = new WorldWind.RenderableLayer();
@@ -117,7 +117,7 @@ var lat = 10.0;
 var lon = -125.0;
 var alt = 800000.0;
 // // --- started working on line for space station ---
-fetch(`${URL}/getIssLocation`)
+fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getIssLocation")
   .then((res) => res.json())
   .then((data) => {
     const { latitude, longitude, altitude } = data;
@@ -153,7 +153,7 @@ path.highlightAttributes = highlightAttributes;
 var highlightController = new WorldWind.HighlightController(wwd);
 var pathsLayer = new WorldWind.RenderableLayer();
 
-fetch(`${URL}/getPastFuturePresentIssLocation`)
+fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getPastFuturePresentIssLocation")
   .then((res) => res.json())
   .then((data) => {
     pathPositions = data;
@@ -178,7 +178,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
   modelLayer.addRenderable(colladaModel);
   modelLayer.addRenderable(placemark);
   window.setInterval(function () {
-    fetch(`${URL}/getIssLocation`)
+    fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getIssLocation")
       .then((res) => res.json())
       .then((data) => {
         const { latitude, longitude, altitude } = data;

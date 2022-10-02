@@ -5,17 +5,24 @@ import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [buttonStyle, setButtonStyle] = useState("container flex justify-between flex-column items-center py-5 hover:bg-sky-500/50 m-3 p-3");
+  const [buttonStyle, setButtonStyle] = useState(
+    "container flex justify-between flex-column items-center py-5 hover:bg-sky-500/50 m-3 p-3"
+  );
 
   return (
     <header className="absolute flex justify-center w-full">
       <div className="px-12">
         <button
           onClick={() => {
-            setIsOpen(!isOpen)
-            buttonStyle === "container flex justify-between flex-column items-center py-5 m-3 p-3" ?
-              setButtonStyle("container flex justify-between flex-column items-center py-5 hover:bg-sky-500/50 m-3 p-3") :
-              setButtonStyle("container flex justify-between flex-column items-center py-5 m-3 p-3")
+            setIsOpen(!isOpen);
+            buttonStyle ===
+            "container flex justify-between flex-column items-center py-5 m-3 p-3"
+              ? setButtonStyle(
+                  "container flex justify-between flex-column items-center py-5 hover:bg-sky-500/50 m-3 p-3"
+                )
+              : setButtonStyle(
+                  "container flex justify-between flex-column items-center py-5 m-3 p-3"
+                );
           }}
         >
           {isOpen ? (
@@ -34,7 +41,7 @@ const Header = () => {
         </button>
       </div>
       <nav className={buttonStyle}>
-        {isOpen &&
+        {isOpen && (
           <>
             <Link href="/">
               <a>
@@ -50,19 +57,17 @@ const Header = () => {
               </a>
             </Link>
             <div className="flex flex-row items-center justify-center">
-              <Link
+              <a
+                className="bg-blue-500 p-4 rounded-2xl text-2xl font-bold"
                 href="/SecondPage/AboutMe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl font-bold"
               >
-                <a className="bg-blue-500 text-xl font-bold p-4 rounded-2xl">
-                  About Me
-                </a>
-              </Link>
+                About Us
+              </a>
             </div>
           </>
-        }
+        )}
       </nav>
     </header>
   );
