@@ -22,7 +22,13 @@ function Loader2(props) {
   return (
     <>
       {!props.completed && (
-        <Lottie options={defaultOptions1} height={400} width={400} />
+        <div className="bg-black flex scale-%100">
+          <Lottie
+            options={defaultOptions1}
+            height={1080}
+            width={1920}
+          />
+        </div>
       )}
     </>
   );
