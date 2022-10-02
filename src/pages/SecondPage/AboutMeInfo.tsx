@@ -13,7 +13,12 @@ export default function AboutMeInfo() {
           <h2 className="text-sm">-----track the iss-----</h2>
         </div>
         <br />
-        <p>What's even better than tracking the Internation Space Station?</p>
+        <p>
+          What's even better than tracking the Internation Space Station? It's
+          tracking it in 3D. The purpose of iss.ict-challenjours is to track the
+          ISS's past, current, and future location while providing a fun,
+          interactive, user-friendly interface.
+        </p>
         <br />
         <div className="flex flex-row font bold place-content-center">
           <h2 className="text-base font-bold">-----Challenjours-----</h2>
