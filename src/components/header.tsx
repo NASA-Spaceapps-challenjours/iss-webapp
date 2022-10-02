@@ -47,7 +47,7 @@ const Header = () => {
             </Link>
             <div className="flex flex-row items-center justify-center">
               <Link
-                href="/urmom/rawr"
+                href="/SecondPage/AboutMe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl font-bold"
