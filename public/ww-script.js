@@ -146,11 +146,6 @@ var colladaLoader = new WorldWind.ColladaLoader(position, config);
 var oneCycle = true;
 
 colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
-<<<<<<< HEAD
-    colladaModel.scale = 500000;
-    modelLayer.addRenderable(colladaModel);
-    window.setInterval(function () {
-=======
   colladaModel.scale = 500000;
   modelLayer.addRenderable(colladaModel);
   window.setInterval(function () {
@@ -163,28 +158,11 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
         alt = altitude;
       })
       .catch((err) => console.log("ewwow"));
->>>>>>> refs/remotes/origin/main
 
     console.log(lat, lon, alt);
 
     position = new WorldWind.Position(lat, lon, alt);
 
-<<<<<<< HEAD
-            })
-            .catch(err => console.log("ewwow"));
-
-        console.log(lat, lon, alt);
-        position = new WorldWind.Position(lat, lon, alt);
-
-        // Placemark label recording
-        placemark.label = "Placemark\n" +
-            "Lat " + modelLayer.renderables[0].position.latitude.toPrecision(4).toString() + "\n" +
-            "Lon " + modelLayer.renderables[0].position.longitude.toPrecision(5).toString();
-        // ISS Model position updating
-        modelLayer.renderables[0].position = position;
-        wwd.redraw();
-    }, 1000);
-=======
     // Placemark label recording
     placemark.label =
       "Placemark\n" +
@@ -197,5 +175,4 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
     modelLayer.renderables[0].position = position;
     wwd.redraw();
   }, 1000);
->>>>>>> refs/remotes/origin/main
 });
