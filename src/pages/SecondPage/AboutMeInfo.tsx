@@ -14,10 +14,10 @@ export default function AboutMeInfo() {
         </div>
         <br />
         <p>
-          What's even better than tracking the Internation Space Station? It's
-          tracking it in 3D. The purpose of iss.ict-challenjours is to track the
-          ISS's past, current, and future location while providing a fun,
-          interactive, user-friendly interface.
+          What&apos;s even better than tracking the Internation Space Station?
+          It&apos;s tracking it in 3D. The purpose of iss.ict-challenjours is to
+          track the ISS&apos;s past, current, and future location while
+          providing a fun, interactive, user-friendly interface.
         </p>
         <br />
         <div className="flex flex-row font bold place-content-center">

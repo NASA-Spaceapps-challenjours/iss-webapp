@@ -157,13 +157,56 @@ function ISS() {
               fontStyle: "italic",
             }}
           >
-            <div className="flex flex-row font-bold text-2xl underline-offset-2">
+            <img src="/images/group.png" alt="group-picture" />
+            <div className="justify-content flex-col font-mono">
+              <div className="flex flex-row font bold place-content-center">
+                <h1>About Us</h1>
+              </div>
+              <h2>track the iss</h2>
+              <p>
+                What&apos;s even better than tracking the Internation Space
+                Station? It&apos;s tracking it in 3D. The purpose of
+                iss.ict-challenjours is to track the ISS&apos;s past, current,
+                and future location while providing a fun, interactive,
+                user-friendly interface.
+              </p>
+
               <h2>User Guide</h2>
-            </div>
-            <div className="flex flex-row font-semibold text-base underline-offset-auto">
-              <h3>Earth 3D Rotation</h3>
-            </div>
-            <div className="flex flex-row italic">
+              <div>
+                <h3>Earth 3D Rotation</h3>
+                <p>
+                  Users can rotate the Earth 360 degrees, to observe the Earth
+                  while watching the International Space Station rotates around
+                  the Earth.
+                </p>
+              </div>
+              <div>
+                <h3>Track ISS Path</h3>
+                <p>
+                  The tracker of the International Space Station displays where
+                  the ISS is currently and its path 90 minutes ago and where it
+                  will be 90 minutes later. Users can interact with the slider
+                  to see where the ISS was or will be at a specific time within
+                  the 90 minutes time frame.
+                </p>
+              </div>
+              <div>
+                <h3>Debris Tracker Toggler</h3>
+                <p>
+                  Users can interact with the &quot;Debris&quot; button to see
+                  space debris alerts within the orbital of the ISS.
+                </p>
+              </div>
+              <div>
+                <h3>Sighting Opportunities</h3>
+                <p>
+                  Users can enter the chosen location to see the prediction of
+                  time and date the International Space Station Location will
+                  pass
+                </p>
+              </div>
+              <h2>The Challenjours</h2>
+
               <p>
                 Users can rotate the Earth 360 degrees, to observe the Earth
                 while watching the International Space Station rotates around
@@ -190,8 +233,8 @@ function ISS() {
             </div>
             <div className="flex flex-row italic">
               <p>
-                Users can interact with the "Debris" button to see space debris
-                alerts within the orbital of the ISS.
+                Users can interact with the &apos;Debris&apos; button to see
+                space debris alerts within the orbital of the ISS.
               </p>
             </div>
             <div className="flex flex-row font-semibold text-base underline-offset-auto">

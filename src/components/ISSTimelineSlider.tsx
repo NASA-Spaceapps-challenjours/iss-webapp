@@ -2,11 +2,11 @@ import { Slider } from "@mui/material";
 import { useState } from "react";
 
 const ISSTimelineSlider = () => {
-  const [time, setTime] = useState(20);
-  const changeValue = (event: any, time: any) => {
-    setTime(time);
+  const [time, setTime] = useState(50);
+  const getValue = (event: any, newTime: number) => {
+    setTime(newTime);
   };
-  const getText = (time: any) => `${time}`;
+  const getText = (time: number) => `${time}`;
   const marks = [
     {
       value: 0,
@@ -37,12 +37,15 @@ const ISSTimelineSlider = () => {
   return (
     <div className="fixed w-3/6 top-3/4">
       <Slider
-        aria-label="Always visible"
         defaultValue={50}
-        getAriaValueText={getText}
         step={10}
+        max={100}
         marks={marks}
         valueLabelDisplay="on"
+        value={time}
+        onChange={() => getValue}
+        getAriaValueText={getText}
+        aria-label="Always visible"
       />
     </div>
   );
