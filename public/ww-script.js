@@ -149,7 +149,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
   colladaModel.scale = 500000;
   modelLayer.addRenderable(colladaModel);
   window.setInterval(function () {
-    var coords = fetch("http://127.0.0.1:8080/getIssLocation")
+    var coords = fetch("https://iss-go-backend-z6hx3vadea-uc.a.run.app/getIssLocation")
       .then((res) => res.json())
       .then((data) => {
         const { latitude, longitude, altitude } = data;
