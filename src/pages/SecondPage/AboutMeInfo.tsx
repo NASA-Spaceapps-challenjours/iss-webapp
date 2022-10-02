@@ -14,10 +14,10 @@ export default function AboutMeInfo() {
         </div>
         <br />
         <p>
-          What&apos;s even better than tracking the Internation Space Station?
-          It&apos;s tracking it in 3D. The purpose of iss.ict-challenjours is to
-          track the ISS&apos;s past, current, and future location while
-          providing a fun, interactive, user-friendly interface.
+          What is the ISS? It is a large spacecraft that orbits around the
+          Earth. It is where the astronauts and cosmonauts live, as well as a
+          science laboratory. The ISS was assembled in space, by the astronauts
+          themselves!
         </p>
         <br />
         <div className="flex flex-row font bold place-content-center">
@@ -30,7 +30,7 @@ export default function AboutMeInfo() {
           <img src="/images/astronaut.png" alt="Adrian Yip"></img>
           <p>Adrian Yip</p>
         </div>
-        <div>Computer Science, WSU, Fronend Dev, UI UX Lead</div>
+        <div>Computer Science, WSU, Frontend Dev, UI UX Lead</div>
 
         <div className="flex flex-row font bold place-content-center">
           <img src="/images/astronaut.png" alt="Benjamin Serrano"></img>

@@ -49,13 +49,6 @@ const Header = () => {
                 </figure>
               </a>
             </Link>
-            <Image
-              src="images/team-logo.jpeg"
-              alt="team logo"
-              width={150}
-              height={150}
-              layout="fixed"
-            />
             <div className="flex flex-row items-center justify-center">
               <Link
                 href="/SecondPage/AboutMe"
