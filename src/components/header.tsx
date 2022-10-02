@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { Button } from "@mui/material";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -35,7 +34,7 @@ const Header = () => {
         </button>
       </div>
       <nav className={buttonStyle}>
-        {isOpen && (
+        {isOpen &&
           <>
             <Link href="/">
               <a>
@@ -70,9 +69,9 @@ const Header = () => {
               </Link>
             </div>
           </>
-        )}
+        }
       </nav>
-    </header >
+    </header>
   );
 };
 

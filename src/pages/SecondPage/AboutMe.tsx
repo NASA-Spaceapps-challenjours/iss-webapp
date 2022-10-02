@@ -20,7 +20,6 @@ function ISS() {
           >
             <img src="/images/stars.png" alt="stars" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0}
             speed={5}
@@ -29,7 +28,6 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0.25}
             speed={5}
@@ -49,7 +47,6 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0}
             speed={4}
@@ -57,7 +54,6 @@ function ISS() {
           >
             <img src="/images/astroid.png" alt="astroid" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0.98}
             speed={4}
@@ -80,7 +76,6 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={1.25}
             speed={0.5}
@@ -182,8 +177,7 @@ function ISS() {
                 <a href="https://github.com/gin-gonic/contrib"> Gin Gonic Contrib </a>
               </div>
             </ParallaxLayer >
-          </div >
-
+          </div>
           <ParallaxLayer
             offset={1.0}
             speed={3.5}
@@ -196,7 +190,6 @@ function ISS() {
             }}
           >
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={2.0}
             speed={0.5}
