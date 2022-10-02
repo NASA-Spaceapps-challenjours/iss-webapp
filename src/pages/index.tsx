@@ -23,11 +23,6 @@ const useWindowSize = () => {
   return size;
 };
 
-// const bingMapOn = () => {
-//   const wwd = document.getElementById("canvasOne");
-//   wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
-// }
-
 const Home: NextPage = () => {
   const size = useWindowSize();
   const [completed, setCompleted] = useState(undefined);
@@ -35,7 +30,10 @@ const Home: NextPage = () => {
   return (
     <>
       {!completed ? (
-        <Loader2 completed={completed} setCompleted={setCompleted} />
+        <Loader2
+          completed={completed}
+          setCompleted={setCompleted}
+        />
       ) : (
         <>
           <Head>
@@ -47,7 +45,7 @@ const Home: NextPage = () => {
             <Header />
             <section className="flex justify-center">
               <Globe wind={size} />
-              <Aside />
+              {/* <Aside /> */}
               <Footer />
               <ISSTimelineSlider />
             </section>
