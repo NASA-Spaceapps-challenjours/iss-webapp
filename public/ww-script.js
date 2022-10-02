@@ -162,9 +162,6 @@ fetch("https://iss-go-backend-z6hx3vadea-uc.a.run.app/getPastFuturePresentIssLoc
     wwd.addLayer(pathsLayer);
   })
   .catch((err) => console.log("ewwow"));
-// Add the path to a layer and the layer to the WorldWindow's layer list.
-
-// // --- end work on line for space station ---
 
 var position = new WorldWind.Position(lat, lon, alt);
 var config = { dirPath: "/models/" };
