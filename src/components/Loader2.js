@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Lottie from "react-lottie";
 
 import * as location from "../49242-world.json";
