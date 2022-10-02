@@ -29,12 +29,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {!completed ? (
+      {!completed ?
         <Loader2
           completed={completed}
           setCompleted={setCompleted}
         />
-      ) : (
+        :
         <>
           <Head>
             <title>le globe | uwu</title>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             </section>
           </main>
         </>
-      )}
+      }
     </>
   );
 };

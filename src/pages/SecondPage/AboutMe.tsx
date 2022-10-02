@@ -23,7 +23,6 @@ function ISS() {
             <ScrollDown />
             <img src="/images/stars.png" alt="stars" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0}
             speed={5}
@@ -63,7 +62,6 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0}
             speed={4}
@@ -71,7 +69,6 @@ function ISS() {
           >
             <img src="/images/astroid.png" alt="astroid" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={0.98}
             speed={4}
@@ -95,7 +92,6 @@ function ISS() {
           >
             <img src="/images/star.png" alt="star" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={1}
             speed={2}
@@ -103,7 +99,6 @@ function ISS() {
           >
             <img src="/images/earth.png" alt="earth" />
           </ParallaxLayer>
-
           <ParallaxLayer
             offset={1.0}
             speed={3}

@@ -2,7 +2,6 @@ import Script from "next/script";
 
 const Globe = (props: any) => {
   const [width, height] = props.wind;
-
   return (
     <div>
       <canvas
