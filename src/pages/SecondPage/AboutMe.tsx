@@ -104,7 +104,7 @@ function ISS() {
               fontStyle: "italic",
             }}
           >
-            Hello,
+            Hello, yo biss
           </ParallaxLayer>
         </Parallax>
       </header>
