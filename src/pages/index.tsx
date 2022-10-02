@@ -4,11 +4,13 @@ import Aside from "../components/aside";
 import Footer from "../components/footer";
 import Globe from "../components/globe";
 import Header from "../components/header";
+import Loader2 from "../components/Loader2";
 
 import { useState, useEffect } from "react";
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
+
   useEffect(() => {
     const updateSize = () => {
       setSize([window.innerWidth, window.innerHeight]);
@@ -27,22 +29,29 @@ const useWindowSize = () => {
 
 const Home: NextPage = () => {
   const size = useWindowSize();
+  const [completed, setCompleted] = useState(undefined);
 
   return (
     <>
-      <Head>
-        <title>le globe | uwu</title>
-        <meta name="description" content="le gwobe rawr" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="bg-slate-500">
-        <Header />
-        <section className="flex justify-center">
-          <Globe wind={size} />
-        </section>
-        <Aside />
-        <Footer />
-      </main>
+      {!completed ? (
+        <Loader2 completed={completed} setCompleted={setCompleted} />
+      ) : (
+        <>
+          <Head>
+            <title>le globe | uwu</title>
+            <meta name="description" content="le gwobe rawr" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <main className="bg-slate-500">
+            <Header />
+            <section className="flex justify-center">
+              <Globe wind={size} />
+              <Aside />
+              <Footer />
+            </section>
+          </main>
+        </>
+      )}
     </>
   );
 };
