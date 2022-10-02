@@ -25,8 +25,8 @@ function Loader2(props) {
         <div className="bg-black flex scale-%100">
           <Lottie
             options={defaultOptions1}
-            height={1080}
-            width={1920}
+            height={800}
+            width={900}
           />
         </div>
       )}
