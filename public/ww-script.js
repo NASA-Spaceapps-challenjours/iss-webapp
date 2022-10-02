@@ -157,6 +157,7 @@ var oneCycle = true;
 colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
   colladaModel.scale = 500000;
   modelLayer.addRenderable(colladaModel);
+  modelLayer.addRenderable(placemark);
   window.setInterval(function () {
     fetch("https://iss-go-backend-z6hx3vadea-uc.a.run.app/getIssLocation")
       .then((res) => res.json())
@@ -174,7 +175,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
 
     // Placemark label recording
     placemark.label =
-      "Placemark\n" +
+      "ISS Space Station \n" +
       "Lat " +
       modelLayer.renderables[0].position.latitude.toPrecision(4).toString() +
       "\n" +
@@ -182,6 +183,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
       modelLayer.renderables[0].position.longitude.toPrecision(5).toString();
     // ISS Model position updating
     modelLayer.renderables[0].position = position;
+    modelLayer.renderables[1].position = position;
     wwd.redraw();
   }, 1000);
 });
