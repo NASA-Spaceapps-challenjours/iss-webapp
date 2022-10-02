@@ -2,14 +2,24 @@ import React from "react";
 
 export default function AboutMeInfo() {
   return (
-    <div className="space-y-1">
-      <h1 className="text-7xl">About Us</h1>
+    <div className="space-y-1 font-mono font-bold ">
+      <div className="font-mono font-bold place-content-center">
+        {" "}
+        <h1 className="text-7xl">About Us</h1>
+      </div>
       <br />
-      <h2 className="px-14 text-2xl">-----track the iss-----</h2>
-      <p>What's even better than tracking the Internation Space Station?</p>
-      <br />
-      <h2 className="px-12 text-2xl">-----Challenjours-----</h2>
-      <br />
+      <div className="font-mono font-bold place-content-center">
+        <div className="flex flex-row font bold place-content-center">
+          <h2 className="text-sm">-----track the iss-----</h2>
+        </div>
+        <br />
+        <p>What's even better than tracking the Internation Space Station?</p>
+        <br />
+        <div className="flex flex-row font bold place-content-center">
+          <h2 className="text-base font-bold">-----Challenjours-----</h2>
+        </div>
+      </div>
+
       <div className="justify-content flex-col font-mono">
         <div className="flex flex-row font bold place-content-center">
           <img src="/images/astronaut.png" alt="Adrian Yip"></img>
@@ -45,7 +55,9 @@ export default function AboutMeInfo() {
       </div>
 
       <div className="Attributes">
-        <h2 className="px-14 text-2xl">-----Attributions-----</h2>
+        <h2 className="flex flex-row font-bold place-content-center">
+          -----Attributions-----
+        </h2>
         <br />
         <a href="https://www.npmjs.com/package/react-lottie">React Lottie</a>
         <br />
