@@ -20,6 +20,11 @@ const useWindowSize = () => {
   return size;
 };
 
+// const bingMapOn = () => {
+//   const wwd = document.getElementById("canvasOne");
+//   wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
+// }
+
 const Home: NextPage = () => {
   const size = useWindowSize();
 

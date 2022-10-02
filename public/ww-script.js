@@ -22,7 +22,7 @@ var wwd = new WorldWind.WorldWindow("canvasOne");
 // Add some image layers to the WorldWindow's globe.
 wwd.addLayer(new WorldWind.BMNGOneImageLayer());
 wwd.addLayer(new WorldWind.BMNGLandsatLayer());
-wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
+// wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
 
 // Add a COLLADA model of the ISS that orbits the Earth
 var modelLayer = new WorldWind.RenderableLayer();
@@ -84,15 +84,20 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
     colladaModel.scale = 500000;
     modelLayer.addRenderable(colladaModel);
     window.setInterval(function () {
-        if (lat < 360) {
-            lat += 0.1;
-            if (oneCycle == true) {
-                positionArray.push(position);
-            }
-        } else {
-            lat = 0.0;
-            oneCycle = false;
-        }
+
+        var coords = fetch("http://127.0.0.1:8080/updateIssLocation")
+            .then(res => res.json())
+            .then(data => {
+                const { latitude, longitude, altitude } = data;
+                lat = latitude;
+                lon = longitude;
+                alt = altitude;
+
+
+            })
+            .catch(err => console.log("ewwow"));
+
+        console.log(lat, lon, alt);
         position = new WorldWind.Position(lat, lon, alt);
 
         // Placemark label recording
@@ -102,5 +107,5 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
         // ISS Model position updating
         modelLayer.renderables[0].position = position;
         wwd.redraw();
-    }, 1.0);
+    }, 1000);
 });
