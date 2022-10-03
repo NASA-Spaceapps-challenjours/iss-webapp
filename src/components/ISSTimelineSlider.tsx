@@ -7,7 +7,7 @@ const ISSTimelineSlider = () => {
     setTime(newTime);
   };
   const getText = (time: number) => `${time}`;
-  let marks: { value: number; label: string }[] = [];
+  const marks: { value: number; label: string }[] = [];
 
   for (let i = -5400; i <= 5400; i += 5) {
     marks.push({
