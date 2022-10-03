@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function AboutMeInfo() {
+export default function AboutPage1() {
   return (
     <div className="space-y-1 font-mono font-bold ">
       <div className="font-mono font-bold place-content-center">

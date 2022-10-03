@@ -1,13 +1,15 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import AboutMeInfo from "./AboutMeInfo";
-import ScrollDown from "./ScrollDown";
+import { useRef } from "react";
+import AboutMeInfo from "../components/AboutMeInfo";
+import Header from "../components/header";
 
-function AboutMe() {
+function About() {
+  const use = useRef();
   return (
     <div className="bg-black">
       <header className="App-header">
         <Parallax
-          pages={4}
+          pages={3}
           style={{ top: "0", left: "0", background: "black" }}
         >
           <ParallaxLayer
@@ -19,8 +21,8 @@ function AboutMe() {
               alignItems: "center",
             }}
           >
-            <ScrollDown />
-            <img src="/images/stars.png" alt="stars" />
+            <Header />
+            <img className="z-10" src="/images/stars.png" alt="stars" />
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -34,7 +36,7 @@ function AboutMe() {
           <ParallaxLayer
             offset={1}
             speed={2}
-            factor={4}
+            factor={3}
             style={{
               display: "cover",
               justifyContent: "center",
@@ -79,7 +81,7 @@ function AboutMe() {
           <ParallaxLayer
             offset={0.85}
             speed={5}
-            factor={50}
+            factor={3}
             style={{ width: "60%", marginRight: "70%" }}
           >
             <img src="/images/star.png" alt="star" />
@@ -87,7 +89,7 @@ function AboutMe() {
           <ParallaxLayer
             offset={0.55}
             speed={4}
-            factor={5}
+            factor={3}
             style={{ width: "80%", marginLeft: "40%" }}
           >
             <img src="/images/star.png" alt="star" />
@@ -101,7 +103,7 @@ function AboutMe() {
             <img src="/images/moon.png" alt="moon" />
           </ParallaxLayer>
           <ParallaxLayer
-            offset={1.0}
+            offset={1}
             speed={3}
             style={{
               display: "flex-column",
@@ -120,7 +122,7 @@ function AboutMe() {
           <ParallaxLayer
             offset={2}
             speed={4}
-            factor={5}
+            factor={3}
             style={{
               display: "",
               justifyContent: "center",
@@ -142,7 +144,7 @@ function AboutMe() {
             <img src="/images/earth.png" alt="earth" />
           </ParallaxLayer>
           <ParallaxLayer
-            offset={2.0}
+            offset={2}
             speed={5}
             style={{
               display: "flex-col",
@@ -209,4 +211,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default About;

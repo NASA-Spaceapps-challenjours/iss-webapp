@@ -1,4 +1,4 @@
-const URL = "https://iss-go-backend-dyzzyvubfq-uc.a.run.app";
+const BASE_URL = "https://iss-go-backend-dyzzyvubfq-uc.a.run.app";
 
 function addPlaceMarker() {
   let placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
@@ -117,7 +117,7 @@ var lat = 10.0;
 var lon = -125.0;
 var alt = 800000.0;
 // // --- started working on line for space station ---
-fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getIssLocation")
+fetch(new URL("/getIssLocation", BASE_URL))
   .then((res) => res.json())
   .then((data) => {
     const { latitude, longitude, altitude } = data;
@@ -153,7 +153,7 @@ path.highlightAttributes = highlightAttributes;
 var highlightController = new WorldWind.HighlightController(wwd);
 var pathsLayer = new WorldWind.RenderableLayer();
 
-fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getPastFuturePresentIssLocation")
+fetch(new URL("/getPastFuturePresentIssLocation", BASE_URL))
   .then((res) => res.json())
   .then((data) => {
     pathPositions = data;
@@ -178,7 +178,7 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
   modelLayer.addRenderable(colladaModel);
   modelLayer.addRenderable(placemark);
   window.setInterval(function () {
-    fetch("https://iss-go-backend-dyzzyvubfq-uc.a.run.app/getIssLocation")
+    fetch(new URL("/getIssLocation", BASE_URL))
       .then((res) => res.json())
       .then((data) => {
         const { latitude, longitude, altitude } = data;

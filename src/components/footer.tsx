@@ -7,10 +7,14 @@ const Footer = () => {
         </div>
         <div className="flex-end bg-blue-300 p-5 rounded-3xl w-auto">
           <div className="">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              🦶🏻 by ICT-challenjour
+            <a
+              href="https://2022.spaceappschallenge.org/challenges/2022-challenges/track-the-iss/teams/challenjours/project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🚀 by ICT-challenjour
               <br />
-              for Nasa Space Apps Challenge 2022
+              for Nasa SpaceAppsChallenge-2022
             </a>
           </div>
         </div>

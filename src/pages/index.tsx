@@ -4,10 +4,9 @@ import Aside from "../components/aside";
 import Footer from "../components/footer";
 import Globe from "../components/globe";
 import Header from "../components/header";
-import Loader2 from "../components/Loader2";
+import ISSTimelineSlider from "../components/ISSTimelineSlider";
 
 import { useState, useEffect } from "react";
-import ISSTimelineSlider from "../components/ISSTimelineSlider";
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -25,30 +24,28 @@ const useWindowSize = () => {
 
 const Home: NextPage = () => {
   const size = useWindowSize();
-  const [completed, setCompleted] = useState(undefined);
 
   return (
     <>
-      {!completed ? (
-        <Loader2 completed={completed} setCompleted={setCompleted} />
-      ) : (
+      <Head>
+        <title>ISS Tracker | Home</title>
+        <meta
+          name="description"
+          content="visualizing and tracking the international space station (ISS). other functions like space debris and point of views of items too!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="">
         <>
-          <Head>
-            <title>ISS Tracker | Home</title>
-            <meta name="description" content="le gwobe rawr" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <main className="bg-slate-500">
-            <Header />
-            <section className="flex justify-center">
-              <Globe wind={size} />
-              <Aside />
-              <Footer />
-              <ISSTimelineSlider />
-            </section>
-          </main>
+          <Header />
+          <section className="flex justify-center">
+            <Globe wind={size} />
+            <Aside />
+            <ISSTimelineSlider />
+          </section>
+          <Footer />
         </>
-      )}
+      </main>
     </>
   );
 };

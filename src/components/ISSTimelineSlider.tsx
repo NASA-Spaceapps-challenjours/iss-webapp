@@ -7,39 +7,20 @@ const ISSTimelineSlider = () => {
     setTime(newTime);
   };
   const getText = (time: number) => `${time}`;
-  const marks = [
-    {
-      value: 0,
-      label: "0",
-    },
-    {
-      value: 20,
-      label: "20",
-    },
-    {
-      value: 40,
-      label: "40",
-    },
-    {
-      value: 60,
-      label: "60",
-    },
-    {
-      value: 80,
-      label: "80",
-    },
-    {
-      value: 100,
-      label: "100",
-    },
-  ];
+  let marks: { value: number; label: string }[] = [];
+
+  for (let i = -5400; i <= 5400; i += 5) {
+    marks.push({
+      value: i,
+      label: `${i}`,
+    });
+  }
 
   return (
     <div className="fixed w-3/6 top-3/4">
       <Slider
-        defaultValue={50}
-        step={10}
-        // max={100}
+        defaultValue={0}
+        step={5}
         marks={marks}
         valueLabelDisplay="on"
         value={time}
