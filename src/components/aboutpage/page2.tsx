@@ -3,7 +3,7 @@ const Page2 = () => {
     <div className="text-white">
       <div>
         {" "}
-        <h1>About Us</h1>
+        <h1 className="text-4xl font-mono">About Us</h1>
       </div>
       <br />
       <div>
@@ -24,33 +24,33 @@ const Page2 = () => {
       </div>
 
       <div>
-        <div>
-          <img src="/images/astronaut.png" alt="Adrian Yip"></img>
+        <div className="flex gap-2 items-center">
+          <img src="/images/icon-helmet.png" alt="Adrian Yip"></img>
           <p>Adrian Yip</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, UI UX Lead</div>
 
-        <div>
-          <img src="/images/astronaut.png" alt="Benjamin Serrano"></img>
+        <div className="flex gap-2 items-center">
+          <img src="/images/icon-helmet.png" alt="Benjamin Serrano"></img>
           <p>Benjamin Serrano</p>
         </div>
         <div>Computer Science, WSU, Backend Dev, Infrastructure</div>
 
-        <div>
-          <img src="/images/astronaut.png" alt="Jacob Singers"></img>
+        <div className="flex gap-2 items-center">
+          <img src="/images/icon-helmet.png" alt="Jacob Singers"></img>
           <p>Jacob Singers</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, UX Designer</div>
 
-        <div>
-          <img src="/images/astronaut.png" alt="Bao-Van Nguyen"></img>
+        <div className="flex gap-2 items-center">
+          <img src="/images/icon-helmet.png" alt="Bao-Van Nguyen"></img>
           <p>Bao-Van Nguyen</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Project Manager</div>
 
-        <div>
-          <img src="/images/astronaut.png" alt="Rebecca Soza"></img>
-          Rebecca Soza
+        <div className="flex gap-2 items-center">
+          <img src="/images/icon-helmet.png" alt="Rebecca Soza"></img>
+          <p>Rebecca Soza</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Web Developer</div>
 
