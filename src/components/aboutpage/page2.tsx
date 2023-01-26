@@ -1,23 +1,19 @@
 const Page2 = () => {
   return (
-    <div className="text-white">
-      <div>
-        {" "}
-        <h1 className="text-4xl font-mono">About Us</h1>
+    <div className="text-white font-mono font-bold">
+      <div className="">
+        <h1 className="text-4xl">About Us</h1>
       </div>
-      <br />
       <div>
         <div>
           <h2>-----track the iss-----</h2>
         </div>
-        <br />
         <p>
           What is the ISS? It is a large spacecraft that orbits around the
           Earth. It is where the astronauts and cosmonauts live, as well as a
           science laboratory. The ISS was assembled in space, by the astronauts
           themselves!
         </p>
-        <br />
         <div>
           <h2>-----Challenjours-----</h2>
         </div>
@@ -53,8 +49,6 @@ const Page2 = () => {
           <p>Rebecca Soza</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Web Developer</div>
-
-        <br />
       </div>
 
       <div>

@@ -8,8 +8,8 @@ import Header from "../components/header";
 function About() {
   const use = useRef();
   return (
-    <div className="bg-black">
-      <Parallax pages={3} style={{ top: "0", left: "0", background: "black" }}>
+    <div className="container mx-auto bg-black">
+      <Parallax pages={3} style={{}} className="container bg-black">
         {/* page 1 */}
         <ParallaxLayer offset={0} speed={1} style={{}}>
           <Header />
@@ -17,7 +17,13 @@ function About() {
         </ParallaxLayer>
         {/* page 2 */}
         <ParallaxLayer offset={1} speed={1} style={{}}>
-          <AboutPage2 />
+          <div className="flex">
+            <div>
+              <img className="" src="/images/group.png" alt="group" />
+              <img className="" src="/images/moon.png" alt="moon" />
+            </div>
+            <AboutPage2 />
+          </div>
         </ParallaxLayer>
         {/* page 3 */}
         <ParallaxLayer offset={2} speed={1} style={{}}>
@@ -25,7 +31,7 @@ function About() {
         </ParallaxLayer>
         {/* stars background page1 */}
         <ParallaxLayer offset={0} speed={0.5} style={{ zIndex: -1 }}>
-          <img className="" src="/images/stars.png" alt="stars" />
+          <img className="" src="/images/bg-stars.png" alt="stars" />
         </ParallaxLayer>
       </Parallax>
     </div>
