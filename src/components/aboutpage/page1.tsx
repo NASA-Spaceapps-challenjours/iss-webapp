@@ -1,8 +1,13 @@
+import Header from "../header";
+
 const Page1 = () => {
   return (
-    <div>
-      <h1 className="mt-32 text-white">Page 1</h1>
-    </div>
+    <>
+      <Header />
+      <div className="mt-32">
+        <h1 className="text-white">Page 1</h1>
+      </div>
+    </>
   );
 };
 

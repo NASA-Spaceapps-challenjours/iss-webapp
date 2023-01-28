@@ -1,4 +1,5 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Header from "../components/header";
 
 const ParallaxTest = () => {
   return (
@@ -12,6 +13,7 @@ const ParallaxTest = () => {
           alignItems: "center",
         }}
       >
+        <Header />
         <span>First Page</span>
       </ParallaxLayer>
       <ParallaxLayer

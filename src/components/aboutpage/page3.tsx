@@ -1,26 +1,22 @@
 const Page3 = () => {
   return (
-    <div className="text-white">
+    <div className="text-white w-1/2">
       <div>
-        <h2>User Guide</h2>
-      </div>
-      <div>
-        <h3>Earth 3D Rotation</h3>
-      </div>
-      <div>
-        <p>
+        <h2 className="font-bold text-2xl underline-offset-2">User Guide</h2>
+        <h3 className="font-semibold text-base underline-offset-auto">
+          Earth 3D Rotation
+        </h3>
+        <p className="italic">
           Users can rotate the Earth 360 degrees, to observe the Earth while
           watching the International Space Station rotates around the Earth.
         </p>
       </div>
 
       <div>
-        <h3>Track ISS Path</h3>
-      </div>
-
-      <div>
-        <p>
-          {" "}
+        <h3 className="font-semibold text-base underline-offset-auto">
+          Track ISS Path
+        </h3>
+        <p className="italic">
           The tracker of the International Space Station displays where the ISS
           is currently and its path 90 minutes ago and where it will be 90
           minutes later. Users can interact with the slider to see where the ISS
@@ -28,19 +24,19 @@ const Page3 = () => {
         </p>
       </div>
       <div>
-        <h3>Debris Tracker Toggler</h3>
-      </div>
-      <div>
-        <p>
+        <h3 className="font-semibold text-base underline-offset-auto">
+          Debris Tracker Toggler
+        </h3>
+        <p className="italic">
           Users can interact with the &quot;Debris&quot; button to see space
           debris alerts within the orbital of the ISS.
         </p>
       </div>
       <div>
-        <h3>Sighting Opportunities</h3>
-      </div>
-      <div>
-        <p>
+        <h3 className="font-semibold text-base underline-offset-auto">
+          Sighting Opportunities
+        </h3>
+        <p className="italic">
           Users can enter the chosen location to see the prediction of time and
           date the International Space Station Location will pass
         </p>
