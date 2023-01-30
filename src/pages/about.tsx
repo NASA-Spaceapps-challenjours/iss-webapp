@@ -35,13 +35,13 @@ function About() {
             <img alt="stars" className="absolute" />
           </picture>
         </ParallaxLayer>
-        {/* stars */}
-        <ParallaxLayer className="w-[60%] ml-[60%]">
+        {/* stars this is making buttons dead */}
+        {/* <ParallaxLayer className="w-[60%] ml-[60%]">
           <picture>
             <source srcSet="/images/star.png" />
             <img alt="stars" className="" />
           </picture>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
         {/* page 2 */}
         <ParallaxLayer
           offset={1}
