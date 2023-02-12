@@ -1,11 +1,12 @@
 const Page2 = () => {
   return (
-    <div className="text-white font-mono font-bold">
-      <div className="">
+    <div className="text-white font-mono font-bold text-sm md:text-base">
+      <div className="text-center">
         <h1 className="text-4xl">About Us</h1>
+        <br />
       </div>
       <div>
-        <div>
+        <div className="text-center">
           <h2>-----track the iss-----</h2>
         </div>
         <p>
@@ -14,44 +15,44 @@ const Page2 = () => {
           science laboratory. The ISS was assembled in space, by the astronauts
           themselves!
         </p>
+        <br />
+      </div>
+      <div className="text-center">
         <div>
           <h2>-----Challenjours-----</h2>
         </div>
-      </div>
-
-      <div>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-center">
           <img src="/images/icon-helmet.png" alt="Adrian Yip"></img>
           <p>Adrian Yip</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, UI UX Lead</div>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-center">
           <img src="/images/icon-helmet.png" alt="Benjamin Serrano"></img>
           <p>Benjamin Serrano</p>
         </div>
         <div>Computer Science, WSU, Backend Dev, Infrastructure</div>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-center">
           <img src="/images/icon-helmet.png" alt="Jacob Singers"></img>
           <p>Jacob Singers</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, UX Designer</div>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-center">
           <img src="/images/icon-helmet.png" alt="Bao-Van Nguyen"></img>
           <p>Bao-Van Nguyen</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Project Manager</div>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-center">
           <img src="/images/icon-helmet.png" alt="Rebecca Soza"></img>
           <p>Rebecca Soza</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Web Developer</div>
       </div>
 
-      <div>
+      <div className="text-center">
         <h2>-----Attributions-----</h2>
         <br />
         <a href="https://www.npmjs.com/package/react-lottie">React Lottie</a>

@@ -26,14 +26,20 @@ function About() {
           offset={0.1}
           onClick={() => parallax.current.scrollTo(1)}
         >
-          <picture>
-            <source srcSet="/images/iss.png" />
-            <img alt="iss" className="absolute grid" />
-          </picture>
-          <picture>
-            <source srcSet="/images/star.png" />
-            <img alt="stars" className="absolute" />
-          </picture>
+          <ParallaxLayer speed={0.25}>
+            <picture>
+              <source srcSet="/images/iss.png" />
+              <img
+                alt="iss"
+                className="absolute grid my-auto mx-auto h-screen w-screen object-contain"
+              />
+            </picture>
+            <picture>
+              <source srcSet="/images/star.png" />
+              <img alt="stars" className="absolute " />
+            </picture>
+          </ParallaxLayer>
+          <ParallaxLayer speed={0.5}></ParallaxLayer>
         </ParallaxLayer>
         {/* stars this is making buttons dead */}
         {/* <ParallaxLayer className="w-[60%] ml-[60%]">
@@ -49,16 +55,16 @@ function About() {
           className="hover:cursor-pointer"
           onClick={() => parallax.current.scrollTo(2)}
         >
-          <div className="flex items-center justify-center h-screen container mx-auto gap-10">
-            <div className="m-12 h-screen">
+          <div className="md:flex items-center justify-center h-screen container mx-auto gap-10">
+            <div className="mx-auto">
               <picture>
                 <source srcSet="/images/group.png" />
-                <img className="" alt="group" />
+                <img className="mx-auto" alt="group" />
               </picture>
-              <picture>
+              {/* <picture>
                 <source srcSet="/images/moon.png" />
-                <img className="" alt="moon" />
-              </picture>
+                <img className="mx-auto" alt="moon" />
+              </picture> */}
             </div>
             <AboutPage2 />
           </div>
@@ -70,9 +76,9 @@ function About() {
           className="container mx-auto hover:cursor-pointer"
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <div className="flex items-center justify-center h-screen gap-10">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center h-screen gap-10">
             <AboutPage3 />
-            <picture className="w-1/2 grid justify-center">
+            <picture className="absolute opacity-50 md:opacity-100 -z-10 md:relative md:w-1/2 grid justify-center">
               <source srcSet="/images/earth.png" />
               <img className="" alt="earth" />
             </picture>
