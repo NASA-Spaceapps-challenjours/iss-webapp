@@ -1,6 +1,16 @@
 # meow
 
 ## next-js app
+
+### Using Docker
+If you have Docker installed you can run the following commands to get a build of this up and running:
+```bash
+docker build -t trackiss .
+docker run -i -t -p 3000:3000 trackiss
+```
+
+And it should be available at [here](https://localhost:3000)
+
 ### Getting Started
 to run the app locally, run the following commands:
 ```bash
