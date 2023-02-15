@@ -74,15 +74,15 @@ function About() {
           className="hover:cursor-pointer h-screen container mx-auto w-screen"
           onClick={() => parallax.current.scrollTo(2)}
         >
-          <div className="md:flex items-center justify-center mx-auto gap-10">
-            <div className="mx-auto">
+          <div className="flex items-center justify-center h-screen mx-auto gap-10">
+            <div className="absolute md:relative mx-auto my-10 opacity-40 md:opacity-100 -z-10">
               <picture>
                 <source srcSet="/images/group.png" />
-                <img className="mx-auto" alt="group" />
+                <img className="m-auto" alt="group" />
               </picture>
               <picture>
                 <source srcSet="/images/moon.png" />
-                <img className="mx-auto" alt="moon" />
+                <img className="m-auto" alt="moon" />
               </picture>
             </div>
             <AboutPage2 />
