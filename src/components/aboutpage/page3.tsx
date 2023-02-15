@@ -1,8 +1,13 @@
 const Page3 = () => {
   return (
-    <div className="text-white md:w-1/2">
-      <div>
+    <div className="text-white md:w-1/2 m-4">
+      <div className="">
         <h2 className="font-bold text-2xl underline-offset-2">User Guide</h2>
+      </div>
+
+      <br />
+
+      <div>
         <h3 className="font-semibold text-base underline-offset-auto">
           Earth 3D Rotation
         </h3>
@@ -11,6 +16,8 @@ const Page3 = () => {
           watching the International Space Station rotates around the Earth.
         </p>
       </div>
+
+      <br />
 
       <div>
         <h3 className="font-semibold text-base underline-offset-auto">
@@ -23,6 +30,9 @@ const Page3 = () => {
           was or will be at a specific time within the 90 minutes time frame.
         </p>
       </div>
+
+      <br />
+
       <div>
         <h3 className="font-semibold text-base underline-offset-auto">
           Debris Tracker Toggler
@@ -32,6 +42,9 @@ const Page3 = () => {
           debris alerts within the orbital of the ISS.
         </p>
       </div>
+
+      <br />
+
       <div>
         <h3 className="font-semibold text-base underline-offset-auto">
           Sighting Opportunities

@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex flex-row items-center justify-center ">
             <Link href="/about">
               <a className="bg-blue-500 p-4 rounded-2xl text-2xl font-bold font-sans m-3">
-                about us
+                about
               </a>
             </Link>
             <Link href="https://github.com/NASA-Spaceapps-challenjours">

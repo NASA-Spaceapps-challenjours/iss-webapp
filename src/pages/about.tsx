@@ -19,13 +19,22 @@ function About() {
         <ParallaxLayer offset={0} speed={0} className="container mx-auto">
           <Header />
         </ParallaxLayer>
-        {/* iss */}
+        {/* iss and asteroids */}
         <ParallaxLayer
           className="w-screen hover:cursor-pointer container mx-auto"
           speed={0}
           offset={0.1}
           onClick={() => parallax.current.scrollTo(1)}
         >
+          {/* asteroid */}
+          <ParallaxLayer
+            offset={0}
+            speed={1.25}
+            style={{ opacity: 0.8, width: "25%", marginLeft: "70%" }}
+          >
+            <img src="/images/astroid.png" alt="astroid" />
+          </ParallaxLayer>
+          {/* iss and star */}
           <ParallaxLayer speed={0.25}>
             <picture>
               <source srcSet="/images/iss.png" />
@@ -36,35 +45,45 @@ function About() {
             </picture>
             <picture>
               <source srcSet="/images/star.png" />
-              <img alt="stars" className="absolute " />
+              <img alt="stars" className="absolute" />
             </picture>
           </ParallaxLayer>
-          <ParallaxLayer speed={0.5}></ParallaxLayer>
+          {/* asteroid left */}
+          <ParallaxLayer
+            offset={0.98}
+            speed={4}
+            style={{ opacity: 0.6, width: "60%", marginRight: "30%" }}
+          >
+            <img src="/images/astroid2.png" alt="astroid2" />
+          </ParallaxLayer>
+          {/* star right */}
+          <ParallaxLayer speed={0.1}>
+            <ParallaxLayer className="w-[60%] ml-[60%]">
+              <picture>
+                <source srcSet="/images/star.png" />
+                <img alt="stars" className="" />
+              </picture>
+            </ParallaxLayer>
+          </ParallaxLayer>
         </ParallaxLayer>
         {/* stars this is making buttons dead */}
-        {/* <ParallaxLayer className="w-[60%] ml-[60%]">
-          <picture>
-            <source srcSet="/images/star.png" />
-            <img alt="stars" className="" />
-          </picture>
-        </ParallaxLayer> */}
         {/* page 2 */}
         <ParallaxLayer
           offset={1}
           speed={0.1}
-          className="hover:cursor-pointer"
+          className="hover:cursor-pointer h-screen container mx-auto w-screen"
           onClick={() => parallax.current.scrollTo(2)}
         >
-          <div className="md:flex items-center justify-center h-screen container mx-auto gap-10">
+          <div className="md:flex items-center justify-center mx-auto gap-10">
             <div className="mx-auto">
               <picture>
                 <source srcSet="/images/group.png" />
                 <img className="mx-auto" alt="group" />
               </picture>
-              {/* <picture>
+              <picture>
                 <source srcSet="/images/moon.png" />
                 <img className="mx-auto" alt="moon" />
-              </picture> */}
+              </picture>
             </div>
             <AboutPage2 />
           </div>
