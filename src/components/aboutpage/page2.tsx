@@ -1,6 +1,6 @@
 const Page2 = () => {
   return (
-    <div className="text-white font-mono font-bold text-sm md:text-base">
+    <div className="text-white font-mono font-bold text-sm md:text-base p-10">
       <div className="text-center">
         <h1 className="text-4xl">About Us</h1>
         <br />
