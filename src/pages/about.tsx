@@ -15,7 +15,7 @@ function About() {
         className="w-full bg-black
       bg-[url('/images/bg-stars.png')] bg-repeat-y bg-cover"
       >
-        {/* page 1 */}
+        {/* page 1 header */}
         <ParallaxLayer offset={0} speed={0} className="container mx-auto">
           <Header />
         </ParallaxLayer>
@@ -66,7 +66,6 @@ function About() {
             </ParallaxLayer>
           </ParallaxLayer>
         </ParallaxLayer>
-        {/* stars this is making buttons dead */}
         {/* page 2 */}
         <ParallaxLayer
           offset={1}
