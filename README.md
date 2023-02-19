@@ -41,7 +41,7 @@ npm run build
 npm run start
 ```
 
-### or export the static files to the `out` folder and then deploy the `out` folder to the server
+or export the static files to the `out` folder and then deploy the `out` folder to the server
 
 ```bash
 npm install
