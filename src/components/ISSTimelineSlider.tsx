@@ -1,4 +1,4 @@
-import { Slider } from "@mui/material";
+// import { Slider } from "@mui/material";
 import { useState } from "react";
 
 const ISSTimelineSlider = () => {
@@ -18,7 +18,7 @@ const ISSTimelineSlider = () => {
 
   return (
     <div className="fixed w-3/6 top-3/4">
-      <Slider
+      {/* <Slider
         defaultValue={0}
         step={5}
         marks={marks}
@@ -27,7 +27,7 @@ const ISSTimelineSlider = () => {
         onChange={() => getValue}
         getAriaValueText={getText}
         aria-label="Always visible"
-      />
+      /> */}
     </div>
   );
 };
