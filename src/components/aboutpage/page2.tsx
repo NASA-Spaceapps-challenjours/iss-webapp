@@ -1,6 +1,6 @@
 const Page2 = () => {
   return (
-    <div className="text-white font-mono font-bold text-sm md:text-base p-10">
+    <div className="text-white font-mono font-bold text-sm md:text-base p-5">
       <div className="text-center">
         <h1 className="text-4xl">About Us</h1>
         <br />
@@ -50,11 +50,11 @@ const Page2 = () => {
           <p>Rebecca Soza</p>
         </div>
         <div>Computer Science, WSU, Frontend Dev, Web Developer</div>
+        <br />
       </div>
 
       <div className="text-center">
         <h2>-----Attributions-----</h2>
-        <br />
         <a href="https://www.npmjs.com/package/react-lottie">React Lottie</a>
         <br />
         <a href="https://react-spring.dev/components/parallax">

@@ -40,8 +40,9 @@ const Home: NextPage = () => {
           <Header />
           <section className="flex justify-center">
             <Globe wind={size} />
-            <Aside />
-            <ISSTimelineSlider />
+            {/* TODO: impletement deez nuts */}
+            {/* <Aside /> */}
+            {/* <ISSTimelineSlider /> */}
           </section>
           <Footer />
         </>
