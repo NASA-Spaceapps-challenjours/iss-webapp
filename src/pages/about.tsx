@@ -26,14 +26,6 @@ function About() {
           offset={0.1}
           onClick={() => parallax.current.scrollTo(1)}
         >
-          {/* asteroid */}
-          <ParallaxLayer
-            offset={0}
-            speed={1.25}
-            style={{ opacity: 0.8, width: "25%", marginLeft: "70%" }}
-          >
-            <img src="/images/astroid.png" alt="astroid" />
-          </ParallaxLayer>
           {/* iss and star */}
           <ParallaxLayer speed={0.25}>
             <picture>
@@ -48,13 +40,21 @@ function About() {
               <img alt="stars" className="absolute" />
             </picture>
           </ParallaxLayer>
-          {/* asteroid left */}
+          {/* asteroid bot left */}
           <ParallaxLayer
             offset={0.98}
             speed={4}
             style={{ opacity: 0.6, width: "60%", marginRight: "30%" }}
           >
             <img src="/images/astroid2.png" alt="astroid2" />
+          </ParallaxLayer>
+          {/* asteroid top right */}
+          <ParallaxLayer
+            offset={0}
+            speed={1.25}
+            style={{ opacity: 0.8, width: "25%", marginLeft: "70%" }}
+          >
+            <img src="/images/astroid.png" alt="astroid" />
           </ParallaxLayer>
           {/* star right */}
           <ParallaxLayer speed={0.1}>
