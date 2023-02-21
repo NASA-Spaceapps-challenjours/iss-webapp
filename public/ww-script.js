@@ -1,4 +1,7 @@
-const BASE_URL = "https://iss-go-backend-dyzzyvubfq-uc.a.run.app";
+// const BASE_URL = "https://iss-go-backend-dyzzyvubfq-uc.a.run.app";
+
+const TLE1 = "1 25544U 98067A   22274.19759479  .00014979  00000+0  26577-3 0  9997";
+const TLE2 = "2 25544  51.6446 171.3620 0002537 314.8685 180.8010 15.50443271361628";
 
 function addPlaceMarker() {
   let placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
@@ -116,15 +119,15 @@ placemarkLayer.addRenderable(placemark);
 var lat = 10.0;
 var lon = -125.0;
 var alt = 800000.0;
-// // --- started working on line for space station ---
-fetch(new URL("/getIssLocation", BASE_URL))
-  .then((res) => res.json())
-  .then((data) => {
-    const { latitude, longitude, altitude } = data;
-    wwd.navigator.lookAtLocation.latitude = latitude;
-    wwd.navigator.lookAtLocation.longitude = longitude;
-  })
-  .catch((err) => console.log("ewwow"));
+// // // --- started working on line for space station ---
+// fetch(new URL("/getIssLocation", BASE_URL))
+//   .then((res) => res.json())
+//   .then((data) => {
+//     const { latitude, longitude, altitude } = data;
+//     wwd.navigator.lookAtLocation.latitude = latitude;
+//     wwd.navigator.lookAtLocation.longitude = longitude;
+//   })
+//   .catch((err) => console.log("ewwow"));
 
 var pathPositions = [];
 
@@ -153,17 +156,17 @@ path.highlightAttributes = highlightAttributes;
 var highlightController = new WorldWind.HighlightController(wwd);
 var pathsLayer = new WorldWind.RenderableLayer();
 
-fetch(new URL("/getPastFuturePresentIssLocation", BASE_URL))
-  .then((res) => res.json())
-  .then((data) => {
-    pathPositions = data;
-    // console.log(JSON.stringify(pathPositions))
-    path = new WorldWind.Path(pathPositions, pathAttributes);
-    pathsLayer.displayName = "Paths";
-    pathsLayer.addRenderable(path);
-    wwd.addLayer(pathsLayer);
-  })
-  .catch((err) => console.log("ewwow"));
+// fetch(new URL("/getPastFuturePresentIssLocation", BASE_URL))
+//   .then((res) => res.json())
+//   .then((data) => {
+//     pathPositions = data;
+//     // console.log(JSON.stringify(pathPositions))
+//     path = new WorldWind.Path(pathPositions, pathAttributes);
+//     pathsLayer.displayName = "Paths";
+//     pathsLayer.addRenderable(path);
+//     wwd.addLayer(pathsLayer);
+//   })
+//   .catch((err) => console.log("ewwow"));
 
 var position = new WorldWind.Position(lat, lon, alt);
 var config = { dirPath: "/models/" };
@@ -177,30 +180,30 @@ colladaLoader.load("ISSComplete1.dae", function (colladaModel) {
   colladaModel.scale = 500000;
   modelLayer.addRenderable(colladaModel);
   modelLayer.addRenderable(placemark);
-  window.setInterval(function () {
-    fetch(new URL("/getIssLocation", BASE_URL))
-      .then((res) => res.json())
-      .then((data) => {
-        const { latitude, longitude, altitude } = data;
-        lat = latitude;
-        lon = longitude;
-        alt = altitude;
-      })
-      .catch((err) => console.log("ewwow"));
+  // window.setInterval(function () {
+  //   fetch(new URL("/getIssLocation", BASE_URL))
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const { latitude, longitude, altitude } = data;
+  //       lat = latitude;
+  //       lon = longitude;
+  //       alt = altitude;
+  //     })
+  //     .catch((err) => console.log("ewwow"));
 
-    position = new WorldWind.Position(lat, lon, alt);
+  //   position = new WorldWind.Position(lat, lon, alt);
 
-    // Placemark label recording
-    placemark.label =
-      "ISS Space Station \n" +
-      "Lat " +
-      modelLayer.renderables[0].position.latitude.toPrecision(4).toString() +
-      "\n" +
-      "Lon " +
-      modelLayer.renderables[0].position.longitude.toPrecision(5).toString();
-    // ISS Model position updating
-    modelLayer.renderables[0].position = position;
-    modelLayer.renderables[1].position = position;
-    wwd.redraw();
-  }, 1000);
+  //   // Placemark label recording
+  //   placemark.label =
+  //     "ISS Space Station \n" +
+  //     "Lat " +
+  //     modelLayer.renderables[0].position.latitude.toPrecision(4).toString() +
+  //     "\n" +
+  //     "Lon " +
+  //     modelLayer.renderables[0].position.longitude.toPrecision(5).toString();
+  //   // ISS Model position updating
+  //   modelLayer.renderables[0].position = position;
+  //   modelLayer.renderables[1].position = position;
+  //   wwd.redraw();
+  // }, 1000);
 });
