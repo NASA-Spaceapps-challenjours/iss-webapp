@@ -7,6 +7,9 @@
 /.next/
 /out/
 
+#npm
+package-lock.json
+
 # production
 /build
 
@@ -23,7 +26,6 @@ yarn-error.log*
 # local env files
 .env
 .env*.local
-
 
 # typescript
 *.tsbuildinfo
