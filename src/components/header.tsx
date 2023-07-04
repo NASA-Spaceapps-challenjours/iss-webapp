@@ -6,31 +6,31 @@ const Header = () => {
       <nav className="container mx-auto flex justify-between flex-column items-center">
         <>
           <Link href="/">
-            <a>
-              <Image
-                src="/2022 Space Apps Logos/svg/Colorway=2-Color White.svg"
-                alt="space apps logo"
-                width={200}
-                height={100}
-                layout="fixed"
-              />
-            </a>
+            <Image
+              src="/2022 Space Apps Logos/svg/Colorway=2-Color White.svg"
+              alt="space apps logo"
+              width={200}
+              height={100}
+              layout="fixed"
+            />
           </Link>
           <div className="flex flex-row items-center justify-center ">
-            <Link href="/about">
-              <a className="bg-blue-500 p-4 rounded-2xl text-2xl font-bold font-sans m-3">
-                about
-              </a>
+            <Link
+              href="/about"
+              className="bg-blue-500 p-4 rounded-2xl text-2xl font-bold font-sans m-3"
+            >
+              <p>about</p>
             </Link>
-            <Link href="https://github.com/NASA-Spaceapps-challenjours">
-              <a className="m-3">
-                <Image
-                  src="/github.png"
-                  alt="github logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
+            <Link
+              href="https://github.com/NASA-Spaceapps-challenjours"
+              className="m-3"
+            >
+              <Image
+                src="/github.png"
+                alt="github logo"
+                width={50}
+                height={50}
+              />
             </Link>
           </div>
         </>
