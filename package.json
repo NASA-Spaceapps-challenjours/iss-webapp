@@ -12,9 +12,15 @@
   "dependencies": {
     "@nasaworldwind/worldwind": "^0.11.0",
     "@react-spring/parallax": "^9.5.5",
+    "@react-three/drei": "^9.80.0",
+    "@react-three/fiber": "^8.13.6",
+    "@types/three": "^0.154.0",
     "next": "^13.4.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.24.2",
+    "satellite.js": "^5.0.0",
+    "three": "^0.155.0",
     "zod": "^3.19.1"
   },
   "devDependencies": {
